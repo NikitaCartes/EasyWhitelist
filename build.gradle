@@ -1,0 +1,48 @@
+plugins {
+    id 'fabric-loom' version '0.10-SNAPSHOT'
+}
+
+repositories {
+    maven { name 'Jitpack'; url 'https://jitpack.io' }
+}
+
+archivesBaseName = "${project.mod_id}-mc${project.minecraft_version}"
+version = "${project.mod_version}"
+
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
+
+dependencies {
+    // Fabric
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+    // Mods
+    modImplementation "com.github.astei:lazydfu:${lazydfu_version}"
+
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = "UTF-8"
+    it.options.release = 16
+}
+
+java {
+    withSourcesJar()
+}
+
+jar {
+    from "LICENCE"
+}
+
+processResources {
+    inputs.property 'id', project.mod_id
+    inputs.property 'name', project.mod_name
+    inputs.property 'version', project.version
+
+    filesMatching('fabric.mod.json') {
+        expand(['id': project.mod_id, 'name': project.mod_name, 'version': project.version])
+    }
+}
+

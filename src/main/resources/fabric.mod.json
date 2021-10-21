@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "easywhitelist",
+  "version": "${version}",
+  "name": "Easy Whitelist Mod",
+  "description": "A mod that make whitelist name-based instead of uuid-based",
+  "authors": [
+    "NikitaCartes"
+  ],
+  "contact": {
+    "homepage": "https://github.com/NikitaCartes/EasyWhitelist",
+    "sources": "https://github.com/NikitaCartes/EasyWhitelist"
+  },
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "xyz.nikitacartes.easywhitelist.EasyWhitelist"
+    ]
+  },
+  "mixins": [
+    "easywhitelist.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "minecraft": "1.17.1"
+  }
+}
