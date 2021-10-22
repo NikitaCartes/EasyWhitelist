@@ -12,6 +12,10 @@ version = "${project.mod_version}"
 sourceCompatibility = JavaVersion.VERSION_16
 targetCompatibility = JavaVersion.VERSION_16
 
+loom {
+    accessWidenerPath = file("src/main/resources/easywhitelist.accesswidener")
+}
+
 dependencies {
     // Fabric
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -19,6 +23,8 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     // Mods
+    modImplementation include(fabricApi.module("fabric-command-api-v1", project.fabric_version));
+    modImplementation include(fabricApi.module("fabric-api-base", project.fabric_version));
     modImplementation "com.github.astei:lazydfu:${lazydfu_version}"
 
 }

@@ -18,6 +18,7 @@
       "xyz.nikitacartes.easywhitelist.EasyWhitelist"
     ]
   },
+  "accessWidener": "easywhitelist.accesswidener",
   "mixins": [
     "easywhitelist.mixins.json"
   ],

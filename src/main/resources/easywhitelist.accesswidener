@@ -1,0 +1,3 @@
+accessWidener	v1	named
+
+accessible    method    net/minecraft/server/dedicated/command/WhitelistCommand    executeAdd    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;)I
