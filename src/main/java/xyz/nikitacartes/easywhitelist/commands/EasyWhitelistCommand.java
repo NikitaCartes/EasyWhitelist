@@ -1,19 +1,15 @@
 package xyz.nikitacartes.easywhitelist.commands;
 
-import com.mojang.authlib.GameProfile;
 import com.mojang.brigadier.CommandDispatcher;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.command.ServerCommandSource;
-import net.minecraft.server.dedicated.command.WhitelistCommand;
-
-import java.util.Collection;
-import java.util.Collections;
 
 import static com.mojang.brigadier.arguments.StringArgumentType.getString;
 import static com.mojang.brigadier.arguments.StringArgumentType.word;
 import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 import static net.minecraft.server.dedicated.command.WhitelistCommand.executeAdd;
+import static net.minecraft.server.dedicated.command.WhitelistCommand.executeRemove;
+import static xyz.nikitacartes.easywhitelist.EasyWhitelist.getProfileFromNickname;
 
 public class EasyWhitelistCommand {
 
@@ -24,11 +20,16 @@ public class EasyWhitelistCommand {
                         .then(argument("targets", word())
                                 .executes(ctx ->
                                         executeAdd(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets")))
-                                ))));
-    }
-
-    public static Collection<GameProfile> getProfileFromNickname(String name) {
-        return Collections.singletonList(new GameProfile(PlayerEntity.getOfflinePlayerUuid(name), name));
+                                )
+                        )
+                )
+                .then(literal("remove")
+                        .then(argument("targets", word())
+                                .executes(ctx ->
+                                        executeRemove(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"))))
+                        )
+                )
+        );
     }
 
 }

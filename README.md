@@ -1,13 +1,21 @@
 ## Easy Whitelist Mod
 
-Simple mod that changes whitelist behaviour from uuid-based to name-based, allowing it to be use at offline mode.
+Simple mod that changes whitelist (also banlist and op-list) behaviour from uuid-based to name-based, allowing it to
+be use at offline mode.
 
 ### Note
-1) Command `easywhitelist add <nickname>` that adds offline uuid and nickname in whitelist
-   - Vanilla `whitelist` in comparison adds lowercase nicknames
-2) Name are case-**sensitive**
-3) Elements in `whitelist.json` must still contain both name and uuid
-   - uuids must be in correct format, but may be random
+
+1) Mod adds following offline version of commands:
+    - Vanilla `whitelist` in comparison adds lowercase nicknames
+    - `easywhitelist add <nickname>`
+    - `easywhitelist remove <nickname>`
+    - `easyban <nickname>`
+    - `easypardon <nickname>`
+    - `easyop <nickname>`
+    - `easydeop <nickname>`
+3) All commands are case-**sensitive**
+4) Elements in `whitelist.json`, `ops.json`, `banned-players.json` must still contain both name and uuid
+    - uuids must be in correct format, but may be random
 
 ```
   {

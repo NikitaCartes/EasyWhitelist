@@ -1,3 +1,8 @@
 accessWidener	v1	named
 
 accessible    method    net/minecraft/server/dedicated/command/WhitelistCommand    executeAdd    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;)I
+accessible    method    net/minecraft/server/dedicated/command/WhitelistCommand    executeRemove    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;)I
+accessible    method    net/minecraft/server/dedicated/command/BanCommand    ban    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;Lnet/minecraft/text/Text;)I
+accessible    method    net/minecraft/server/dedicated/command/PardonCommand    pardon    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;)I
+accessible    method    net/minecraft/server/dedicated/command/OpCommand    op    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;)I
+accessible    method    net/minecraft/server/dedicated/command/DeOpCommand    deop    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;)I
