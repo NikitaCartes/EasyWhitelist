@@ -26,7 +26,7 @@ be use at offline mode.
 
 [Discord](https://discord.gg/UY4nhvUzaK)
 
-<del>[CurseForge](https://www.curseforge.com/minecraft/mc-mods/easyauth), [Modrinth](https://modrinth.com/mod/easyauth)
+[CurseForge](https://www.curseforge.com/minecraft/mc-mods/easywhitelist), [Modrinth](https://modrinth.com/mod/easywhitelist)
 
 [My authentication mod](https://github.com/NikitaCartes/EasyAuth), for Fabric servers.
  
