@@ -1,4 +1,4 @@
-### 0.2.0 Minecraft 1.17.1
+### 0.2.0 Minecraft 1.17.1, 1.18
 
 Add offline version of some commands:
 
