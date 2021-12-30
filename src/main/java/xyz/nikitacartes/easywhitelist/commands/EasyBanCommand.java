@@ -3,6 +3,8 @@ package xyz.nikitacartes.easywhitelist.commands;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.server.command.ServerCommandSource;
 
+import me.lucko.fabric.api.permissions.v0.Permissions;
+
 import static com.mojang.brigadier.arguments.StringArgumentType.getString;
 import static com.mojang.brigadier.arguments.StringArgumentType.word;
 import static net.minecraft.command.argument.MessageArgumentType.getMessage;
@@ -16,7 +18,7 @@ public class EasyBanCommand {
 
     public static void registerCommand(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(literal("easyban")
-                .requires(source -> source.hasPermissionLevel(3))
+                .requires(Permissions.require("easywhitelist.commands.easyban", 3))
                 .then((argument("targets", word())
                         .executes(ctx ->
                                 ban(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets")), null)))

@@ -1,3 +1,15 @@
+### 1.0.0 Minecraft 1.18
+
+Add permission for all commands
+
+* `easywhitelist.commands.easywhitelist.root`
+  * `easywhitelist.commands.easywhitelist.add`
+  * `easywhitelist.commands.easywhitelist.remove`
+* `easywhitelist.commands.easypardon`
+* `easywhitelist.commands.easyop`
+* `easywhitelist.commands.easydeop`
+* `easywhitelist.commands.easyban`
+
 ### 0.2.0 Minecraft 1.17.1, 1.18
 
 Add offline version of some commands:

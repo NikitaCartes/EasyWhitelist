@@ -24,6 +24,15 @@ be use at offline mode.
   }
 ```
 
+5) List of permissions:
+* `easywhitelist.commands.easywhitelist.root`
+  * `easywhitelist.commands.easywhitelist.add`
+  * `easywhitelist.commands.easywhitelist.remove`
+* `easywhitelist.commands.easypardon`
+* `easywhitelist.commands.easyop`
+* `easywhitelist.commands.easydeop`
+* `easywhitelist.commands.easyban`
+
 [Discord](https://discord.gg/UY4nhvUzaK)
 
 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/easywhitelist), [Modrinth](https://modrinth.com/mod/easywhitelist)
