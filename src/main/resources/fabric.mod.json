@@ -23,7 +23,7 @@
     "easywhitelist.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.12.0",
-    "minecraft": "1.19.x"
+    "fabricloader": ">=0.14.19",
+    "minecraft": ">=1.20-"
   }
 }

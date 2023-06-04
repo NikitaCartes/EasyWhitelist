@@ -1,4 +1,4 @@
-### 1.0.0 Minecraft 1.18
+### 1.0.0 Minecraft 1.18, 1.19, 1.20
 
 Add permission for all commands
 

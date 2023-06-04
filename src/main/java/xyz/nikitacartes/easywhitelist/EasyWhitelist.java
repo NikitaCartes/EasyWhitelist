@@ -3,7 +3,7 @@ package xyz.nikitacartes.easywhitelist;
 import com.mojang.authlib.GameProfile;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.minecraft.util.dynamic.DynamicSerializableUuid;
+import net.minecraft.util.Uuids;
 import org.apache.logging.log4j.LogManager;
 import xyz.nikitacartes.easywhitelist.commands.*;
 
@@ -13,7 +13,7 @@ import java.util.Collections;
 public class EasyWhitelist implements ModInitializer {
 
     public static Collection<GameProfile> getProfileFromNickname(String name) {
-        return Collections.singletonList(new GameProfile(DynamicSerializableUuid.getOfflinePlayerUuid(name), name));
+        return Collections.singletonList(new GameProfile(Uuids.getOfflinePlayerUuid(name), name));
     }
 
     @Override
