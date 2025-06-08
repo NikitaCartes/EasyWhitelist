@@ -6,7 +6,6 @@ import net.minecraft.server.command.ServerCommandSource;
 import me.lucko.fabric.api.permissions.v0.Permissions;
 
 import static com.mojang.brigadier.arguments.StringArgumentType.getString;
-import static com.mojang.brigadier.arguments.StringArgumentType.word;
 import static com.mojang.brigadier.arguments.StringArgumentType.string;
 import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
@@ -29,7 +28,7 @@ public class EasyWhitelistCommand {
                 )
                 .then(literal("remove")
                         .requires(Permissions.require("easywhitelist.commands.easywhitelist.remove", 3))
-                        .then(argument("targets", word())
+                        .then(argument("targets", string())
                                 .executes(ctx ->
                                         executeRemove(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"))))
                         )
