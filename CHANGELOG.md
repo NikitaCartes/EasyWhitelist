@@ -1,3 +1,7 @@
+### 1.1.0 Minecraft 1.20, 1.21
+
+* Do not include `fabric-permissions-api` in jar
+
 ### 1.0.0 Minecraft 1.18, 1.19, 1.20
 
 Add permission for all commands

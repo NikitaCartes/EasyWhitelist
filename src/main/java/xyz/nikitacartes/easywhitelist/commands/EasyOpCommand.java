@@ -2,8 +2,7 @@ package xyz.nikitacartes.easywhitelist.commands;
 
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.server.command.ServerCommandSource;
-
-import me.lucko.fabric.api.permissions.v0.Permissions;
+import xyz.nikitacartes.easywhitelist.integrations.Permissions;
 
 import static com.mojang.brigadier.arguments.StringArgumentType.getString;
 import static com.mojang.brigadier.arguments.StringArgumentType.word;
