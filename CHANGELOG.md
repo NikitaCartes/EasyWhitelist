@@ -1,3 +1,7 @@
+### 1.1.1 Minecraft 1.20, 1.21
+
+* 1.21.9 Support
+
 ### 1.1.0 Minecraft 1.20, 1.21
 
 * Do not include `fabric-permissions-api` in jar
