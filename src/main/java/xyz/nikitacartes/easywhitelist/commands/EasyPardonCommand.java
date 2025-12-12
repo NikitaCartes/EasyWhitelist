@@ -6,6 +6,7 @@ import xyz.nikitacartes.easywhitelist.integrations.Permissions;
 
 import static com.mojang.brigadier.arguments.StringArgumentType.getString;
 import static com.mojang.brigadier.arguments.StringArgumentType.word;
+import static net.minecraft.command.permission.PermissionLevel.ADMINS;
 import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 import static net.minecraft.server.dedicated.command.PardonCommand.pardon;
@@ -15,7 +16,7 @@ public class EasyPardonCommand {
 
     public static void registerCommand(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(literal("easypardon")
-                .requires(Permissions.require("easywhitelist.commands.easypardon", 3))
+                .requires(Permissions.require("easywhitelist.commands.easypardon", ADMINS))
                 .then(argument("targets", word())
                         .executes(ctx ->
                                 pardon(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"))))));

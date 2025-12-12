@@ -8,6 +8,7 @@ import static com.mojang.brigadier.arguments.StringArgumentType.getString;
 import static com.mojang.brigadier.arguments.StringArgumentType.word;
 import static net.minecraft.command.argument.MessageArgumentType.getMessage;
 import static net.minecraft.command.argument.MessageArgumentType.message;
+import static net.minecraft.command.permission.PermissionLevel.ADMINS;
 import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 import static net.minecraft.server.dedicated.command.BanCommand.ban;
@@ -17,7 +18,7 @@ public class EasyBanCommand {
 
     public static void registerCommand(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(literal("easyban")
-                .requires(Permissions.require("easywhitelist.commands.easyban", 3))
+                .requires(Permissions.require("easywhitelist.commands.easyban", ADMINS))
                 .then((argument("targets", word())
                         .executes(ctx ->
                                 ban(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets")), null)))

@@ -1,4 +1,8 @@
-### 1.1.1 Minecraft 1.20, 1.21
+### 1.1.2 Minecraft 1.21.11
+
+* 1.21.11 Support
+
+### 1.1.1 Minecraft 1.21.9
 
 * 1.21.9 Support
 
