@@ -19,6 +19,6 @@ public class EasyDeOpCommand {
                 .requires(Permissions.require("easywhitelist.commands.easydeop", OWNERS))
                 .then(argument("targets", word())
                         .executes(ctx ->
-                                deop(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"))))));
+                                deop(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"), ctx)))));
     }
 }

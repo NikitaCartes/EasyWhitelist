@@ -19,6 +19,6 @@ public class EasyPardonCommand {
                 .requires(Permissions.require("easywhitelist.commands.easypardon", ADMINS))
                 .then(argument("targets", word())
                         .executes(ctx ->
-                                pardon(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"))))));
+                                pardon(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"), ctx)))));
     }
 }

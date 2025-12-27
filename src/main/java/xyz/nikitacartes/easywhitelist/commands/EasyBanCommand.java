@@ -21,9 +21,9 @@ public class EasyBanCommand {
                 .requires(Permissions.require("easywhitelist.commands.easyban", ADMINS))
                 .then((argument("targets", word())
                         .executes(ctx ->
-                                ban(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets")), null)))
+                                ban(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"), ctx), null)))
                         .then(argument("reason", message())
                                 .executes(ctx ->
-                                        ban(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets")), getMessage(ctx, "reason"))))));
+                                        ban(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"), ctx), getMessage(ctx, "reason"))))));
     }
 }

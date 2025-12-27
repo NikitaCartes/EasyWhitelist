@@ -1,3 +1,8 @@
+### 1.1.3 Minecraft 1.21.11
+
+* Include correct version of the `uuid` if the player is online
+* Kick players if they are banned
+
 ### 1.1.2 Minecraft 1.21.11
 
 * 1.21.11 Support

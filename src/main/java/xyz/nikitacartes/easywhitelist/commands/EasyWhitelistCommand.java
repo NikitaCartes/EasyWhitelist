@@ -22,7 +22,7 @@ public class EasyWhitelistCommand {
                         .requires(Permissions.require("easywhitelist.commands.easywhitelist.add", ADMINS))
                         .then(argument("targets", word())
                                 .executes(ctx ->
-                                        executeAdd(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets")))
+                                        executeAdd(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"), ctx))
                                 )
                         )
                 )
@@ -30,7 +30,7 @@ public class EasyWhitelistCommand {
                         .requires(Permissions.require("easywhitelist.commands.easywhitelist.remove", ADMINS))
                         .then(argument("targets", word())
                                 .executes(ctx ->
-                                        executeRemove(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"))))
+                                        executeRemove(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"), ctx)))
                         )
                 )
         );

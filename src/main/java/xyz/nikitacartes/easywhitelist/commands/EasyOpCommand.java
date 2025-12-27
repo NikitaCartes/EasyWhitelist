@@ -19,6 +19,6 @@ public class EasyOpCommand {
                 .requires(Permissions.require("easywhitelist.commands.easyop", OWNERS))
                 .then(argument("targets", word())
                         .executes(ctx ->
-                                op(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"))))));
+                                op(ctx.getSource(), getProfileFromNickname(getString(ctx, "targets"), ctx)))));
     }
 }
