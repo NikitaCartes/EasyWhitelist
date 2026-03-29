@@ -1,5 +1,5 @@
 plugins {
-    id "fabric-loom" version "1.14-SNAPSHOT"
+    id "net.fabricmc.fabric-loom" version "1.15-SNAPSHOT"
 }
 
 repositories {
@@ -11,8 +11,8 @@ base.archivesName  = "${project.mod_id}"
 version = "${project.mod_version}"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
 }
 loom {
     accessWidenerPath = file("src/main/resources/easywhitelist.accesswidener")
@@ -21,20 +21,19 @@ loom {
 dependencies {
     // Fabric
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings loom.officialMojangMappings()
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     // Permissions
-    modImplementation("me.lucko:fabric-permissions-api:${project.fabric_permissions_version}")
+    implementation("me.lucko:fabric-permissions-api:${project.fabric_permissions_version}")
 
     // Mods
-    modImplementation fabricApi.module("fabric-command-api-v2", project.fabric_version)
-    modImplementation fabricApi.module("fabric-api-base", project.fabric_version)
+    implementation fabricApi.module("fabric-command-api-v2", project.fabric_version)
+    implementation fabricApi.module("fabric-api-base", project.fabric_version)
 }
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
-    it.options.release = 21
+    it.options.release = 25
 }
 
 java {

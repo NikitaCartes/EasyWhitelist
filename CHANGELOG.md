@@ -1,3 +1,7 @@
+### 1.1.4 Minecraft 21.6
+
+* 21.6 Support
+
 ### 1.1.3 Minecraft 1.21.11
 
 * Include correct version of the `uuid` if the player is online
