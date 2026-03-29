@@ -1,8 +1,8 @@
 package xyz.nikitacartes.easywhitelist.integrations;
 
-import net.minecraft.command.permission.Permission;
-import net.minecraft.command.permission.PermissionLevel;
-import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.server.permissions.Permission;
+import net.minecraft.server.permissions.PermissionLevel;
+import net.minecraft.commands.CommandSourceStack;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Predicate;
@@ -12,11 +12,11 @@ import static xyz.nikitacartes.easywhitelist.EasyWhitelist.permissionsLoaded;
 
 public class Permissions {
 
-    public static @NotNull Predicate<ServerCommandSource> require(@NotNull String permission, PermissionLevel defaultRequiredLevel) {
+    public static @NotNull Predicate<CommandSourceStack> require(@NotNull String permission, PermissionLevel defaultRequiredLevel) {
         if (permissionsLoaded) {
             return source -> check(source, permission, defaultRequiredLevel);
         } else {
-            return source -> source.getPermissions().hasPermission(new Permission.Level(defaultRequiredLevel));
+            return source -> source.permissions().hasPermission(new Permission.HasCommandLevel(defaultRequiredLevel));
         }
     }
 }

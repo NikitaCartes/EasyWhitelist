@@ -3,9 +3,9 @@
   "package": "xyz.nikitacartes.easywhitelist.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "BannedPlayerListMixin",
-    "OperatorListMixin",
-    "WhitelistMixin"
+    "UserBanListMixin",
+    "ServerOpListMixin",
+    "UserWhiteListMixin"
   ],
   "minVersion": "0.8",
   "injectors": {

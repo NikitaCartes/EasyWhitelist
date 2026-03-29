@@ -1,8 +1,8 @@
 accessWidener	v1	named
 
-accessible    method    net/minecraft/server/dedicated/command/WhitelistCommand    executeAdd    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;)I
-accessible    method    net/minecraft/server/dedicated/command/WhitelistCommand    executeRemove    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;)I
-accessible    method    net/minecraft/server/dedicated/command/BanCommand    ban    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;Lnet/minecraft/text/Text;)I
-accessible    method    net/minecraft/server/dedicated/command/PardonCommand    pardon    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;)I
-accessible    method    net/minecraft/server/dedicated/command/OpCommand    op    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;)I
-accessible    method    net/minecraft/server/dedicated/command/DeOpCommand    deop    (Lnet/minecraft/server/command/ServerCommandSource;Ljava/util/Collection;)I
+accessible    method    net/minecraft/server/commands/WhitelistCommand    addPlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
+accessible    method    net/minecraft/server/commands/WhitelistCommand    removePlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
+accessible    method    net/minecraft/server/commands/BanPlayerCommands    banPlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;Lnet/minecraft/network/chat/Component;)I
+accessible    method    net/minecraft/server/commands/PardonCommand    pardonPlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
+accessible    method    net/minecraft/server/commands/OpCommand    opPlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
+accessible    method    net/minecraft/server/commands/DeOpCommands    deopPlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
