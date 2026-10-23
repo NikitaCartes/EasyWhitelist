@@ -18,13 +18,15 @@
       "xyz.nikitacartes.easywhitelist.EasyWhitelist"
     ]
   },
-  "accessWidener": "easywhitelist.accesswidener",
+  "accessWidener": "accesswidener/${accessWidener}",
   "mixins": [
     "easywhitelist.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.18.5",
-    "minecraft": ">=26.1-"
+    "fabric-api": "*",
+    "minecraft": "${supported_minecraft_version}",
+    "java": ">=${java_version}"
   },
   "suggests": {
     "fabric-permissions-api-v0": "*"

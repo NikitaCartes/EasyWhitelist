@@ -1,8 +1,0 @@
-accessWidener	v1	official
-
-accessible    method    net/minecraft/server/commands/WhitelistCommand    addPlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
-accessible    method    net/minecraft/server/commands/WhitelistCommand    removePlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
-accessible    method    net/minecraft/server/commands/BanPlayerCommands    banPlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;Lnet/minecraft/network/chat/Component;)I
-accessible    method    net/minecraft/server/commands/PardonCommand    pardonPlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
-accessible    method    net/minecraft/server/commands/OpCommand    opPlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
-accessible    method    net/minecraft/server/commands/DeOpCommands    deopPlayers    (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I

@@ -8,7 +8,7 @@ import static com.mojang.brigadier.arguments.StringArgumentType.getString;
 import static com.mojang.brigadier.arguments.StringArgumentType.word;
 import static net.minecraft.commands.arguments.MessageArgument.getMessage;
 import static net.minecraft.commands.arguments.MessageArgument.message;
-import static net.minecraft.server.permissions.PermissionLevel.ADMINS;
+import static xyz.nikitacartes.easywhitelist.integrations.Permissions.ADMINS;
 import static net.minecraft.commands.Commands.argument;
 import static net.minecraft.commands.Commands.literal;
 import static net.minecraft.server.commands.BanPlayerCommands.banPlayers;

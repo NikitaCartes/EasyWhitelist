@@ -6,9 +6,9 @@ import xyz.nikitacartes.easywhitelist.integrations.Permissions;
 
 import static com.mojang.brigadier.arguments.StringArgumentType.getString;
 import static com.mojang.brigadier.arguments.StringArgumentType.word;
-import static net.minecraft.server.permissions.PermissionLevel.ADMINS;
 import static net.minecraft.commands.Commands.argument;
 import static net.minecraft.commands.Commands.literal;
+import static xyz.nikitacartes.easywhitelist.integrations.Permissions.ADMINS;
 import static net.minecraft.server.commands.WhitelistCommand.addPlayers;
 import static net.minecraft.server.commands.WhitelistCommand.removePlayers;
 import static xyz.nikitacartes.easywhitelist.EasyWhitelist.getProfileFromNickname;

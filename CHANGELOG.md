@@ -1,3 +1,8 @@
+### 1.2.0 Minecraft 1.20 - 26.3, Fabric + NeoForge
+
+* Fabric: 1.20 - 26.3
+* NeoForge: 1.21.1 - 26.3
+
 ### 1.1.4 Minecraft 21.6
 
 * 21.6 Support

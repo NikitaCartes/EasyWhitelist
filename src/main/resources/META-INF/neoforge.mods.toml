@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "MIT"
+issueTrackerURL = "https://github.com/NikitaCartes/EasyWhitelist/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${version}"
+displayName = "${mod_name}"
+displayURL = "https://github.com/NikitaCartes/EasyWhitelist"
+authors = "NikitaCartes"
+description = '''
+A mod that make whitelist name-based instead of uuid-based.
+'''
+side = "SERVER"
+
+[[mixins]]
+config = "easywhitelist.mixins.json"
+
+[[accessTransformers]]
+file = "META-INF/accesstransformer.cfg"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${neoforge_version},)"
+ordering = "NONE"
+side = "SERVER"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${supported_minecraft_version}"
+ordering = "NONE"
+side = "SERVER"
